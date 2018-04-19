@@ -4,5 +4,5 @@
 
 set -e -o pipefail
 OPT=${OPT:-$(pwd)/opt}
-./bjam --max-kenlm-order 10 --with-boost=$OPT --with-cmph=$OPT --with-xmlrpc-c=$OPT --with-mm --with-probing-pt -j$(getconf _NPROCESSORS_ONLN) $@
+./bjam --max-kenlm-order=10 --with-boost=$OPT --with-cmph=$OPT --with-xmlrpc-c=$OPT --with-mm --with-probing-pt -j$(getconf _NPROCESSORS_ONLN) $@
 
